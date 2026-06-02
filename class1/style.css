@@ -1,0 +1,93 @@
+body{
+    margin: 0%;
+    background: gray;
+}
+.mainFlex{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.left-container{
+    background-image: url('./assets/Gemini_Generated_Image_gsgq86gsgq86gsgq.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 45vw;
+}
+
+.right-container{
+    display: flex;
+    position: relative;
+    left: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: purple;
+    height: 55vh;
+    width: 30vw;
+    border-radius: 10px;
+}
+
+.sign-up-form{
+    
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+
+}.sign-up-form input[type = "email"],input[type="password"]{
+    
+    background-color: gray;
+    border: 2px solid black;
+    height: 4.5vh;
+    width: 18vw;
+    border-radius: 8px;
+
+}.sign-up-form input[type = "email"],input[type="password"]{
+    
+    &:focus{
+        outline: none;
+    }
+    &:hover{
+        cursor: pointer;
+    }
+}.email-label , .password-label{
+    
+    display: flex;
+    flex-direction: column; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    text-transform: capitalize;
+
+}.email-label span, .password-label span{
+
+    position: relative;
+    left: 1rem;
+
+}.submit-btn{
+    max-height:100px;
+    min-height: 5vh;
+    width: 15vw;
+    border-radius: 10px;
+    border: none;
+   background-color: chartreuse;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  */
