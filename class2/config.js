@@ -1,23 +1,19 @@
 import { doc , getFirestore , collection , addDoc } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-firestore.js";
-import { initializeApp } from " https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-analytics.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyDeJIgDFGk7rGvPBOKOeohlJ_KxzV-L0sI",
-  authDomain: "real-estate-38daa.firebaseapp.com",
-  projectId: "real-estate-38daa",
-  storageBucket: "real-estate-38daa.firebasestorage.app",
-  messagingSenderId: "477602530305",
-  appId: "1:477602530305:web:494ab2b4aff6baf13f2c00",
-  measurementId: "G-VF8XN25E9K"
-};
-
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+const app = initializeApp({
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
+});
 const db = getFirestore(app);
 const alovelaceDocumentRef = doc(db, 'users', 'alovelace');
 const analytics = getAnalytics(app);
