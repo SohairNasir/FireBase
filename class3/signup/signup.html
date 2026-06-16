@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+
+    
+    <div class="form signup">
+        <h3 class="heading">SignUp-Form</h3>
+        <form action="#" onsubmit="checkInputs(event)" class="content">
+            <div class="line underline"></div>
+            <div class="all-innputs-parent">
+            <div class="field input">
+                <input class="all-inputs" id="email" type="email" placeholder="Enter your Email"/>
+                <p class="Error-filed"></p>
+            </div>
+
+            <div class="field input">
+            <input id="password" type="password" placeholder="Enter your new Password" class="password all-inputs"/>
+            <p class="Error-filed"></p>
+            <i class='bx bx-hide hide-show'></i>
+            </div>
+            <div class="field input">
+                <input id="confirm-pass" type="password" placeholder="Confirm Password" class="password all-inputs" />
+                <p class="Error-filed"></p>
+
+            <i class='bx bx-hide hide-show'></i>
+            </div>
+ 
+        </div>
+            <div class="field btn">
+                <button id="submit-btn">Sign Up</button>
+            </div>
+
+            <div class="link sign-login">
+                <span>Already have an Account!</span>
+                <a href="#" class="forget">Login</a>
+            </div>
+
+
+            <div class="line"></div>
+            <!-- Other Login Options -->
+
+            <div class="thirdLogin field facebook">
+                <i class='bx bxl-facebook-circle face-icon'></i>
+                <span>SignUp with facebook</span>
+            </div>
+            
+            <div class="thirdLogin field google">
+                <i class='bx bxl-google face-icon'></i>
+                <span>SignUp with google</span>
+            </div>
+
+            
+
+
+        </form>
+    </div>
+
+<script src="signup.js" type="module" ></script>    
+</body>
+</html>
