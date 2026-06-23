@@ -1,167 +1,243 @@
-*{
-    padding: 0;
+/* 🌟 Reset and Base Styles */
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.container{
-    background-color: rgb(255, 119, 0);
+body {
+    background: #0f0f12; /* Premium Ultra Dark */
     display: flex;
-    align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100vh;
-    column-gap: 0px;
-}
-
-.form{
-    position: absolute;
-    left: 400px;
-    max-width: 450px;
-    width: 100%;
-    margin: 20px;
-    padding-top: 15px;
-    background-color: #3b5998;
-    border-radius: 8px;    }
-
-.form.signup{
-    /* opacity: 0; */
-    /* pointer-events: none; */
-}
-.forms.Show-Signup .form.signup{
-    /* opacity: 1; */
-    pointer-events: auto;
-}
-
-.forms.Show-Signup .form.login{
-    /* opacity: 0; */
-    pointer-events: none;
-}
-
-.heading{
-    font-size: 28px;
-    text-align: center;
-    font-weight: 500 ;
-    
-}
-
-.line{
-    background-color: rgb(195, 195, 195);
-    margin: 20px;
-    height: 1px;
-}
-.underline{
-    background-color: rgb(255, 119, 0);
-    margin: 8px 120px 40px 120px;
-    height: 2.5px;
-}
-
-.content {
-    margin: 0 20px;
-    margin-bottom: 30px ;
-}
-.field{
-    width: 100%;
-    height: 35px;
-    position: relative;
-    margin: 10px 0 ;
-}
-.input{
-    padding: 0 20px;
-}
-.field input,
-.field button{
-
-    width: 100%;
-    height: 100%;
-    padding: 0 15px;
-    border-radius: 12px;
-    border: 2px solid black;
-}.field input:focus{
-    outline: none;
-}
-.field input{
-    /* outline: none; */
-    /* border-style: none none solid none; */
-    border-radius: 10;
-}
-.input .hide-show{
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    /* opacity: 0.6; */
-    cursor: pointer;
-}
-.field input:focus{
-    border-bottom: 2px solid;
-}
-.field button{
-    background-color: rgb(255, 119, 0);
-    border: none;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 100;
-    cursor: pointer;
-}
-
-.forg {
-    margin: 10px 0 23px 0;
-    text-align: right;
-    padding: 0 15px;
-    text-decoration: none;
-    cursor: pointer;
-}
-.link a,
-.forg a{
-    text-decoration: none;
-}
-.link{
-    text-align: center;
-    margin: 20px 0;
-    cursor: pointer;
-}
-
-.thirdLogin{
-    /* text-align: center; */
-    border: 1px solid grey;
-    display: flex;
     align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    cursor: pointer;
+    min-height: 100vh;
+    padding: 15px;
+    overflow: hidden; /* Screen bilkul freeze rahegi, no scroll */
 }
 
-.facebook{
-    border-style: none;
-    background-color: #3b5998;
-    color: #fff;
-}
-.face-icon{
-    position: absolute;
-    left: 0;
-    width: 30px;
-    /* height: 30px; */
-    font-size: 25px;
-    padding-left: 5px;
-    /* display: flex; */
-    /* align-items: center; */
-}
-.google{
-    opacity: 0.7;
+/* 📦 Glassmorphism Center Card */
+.form {
+    background: #18181c;
+    border: 1px solid #2c2c35;
+    border-radius: 14px;
+    width: 100%;
+    max-width: 360px; /* Thoda compact size better premium look ke liye */
+    padding: 24px 22px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
-.Error-filed{
-    margin-left:10px;
-    white-space: nowrap;
-    width: auto;
-    font-size: 1rem;
-    font-weight: 400;
+.heading {
+    color: #ffffff;
+    font-size: 22px; /* Clean and not too big */
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2px;
 }
-.all-innputs-parent{
+
+.sub-heading {
+    color: #8a8a98;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 🗂️ Inputs Structure */
+.all-innputs-parent {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 10px; /* Perfextly compact gap */
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
     gap: 5px;
-    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.field label {
+    color: #cccccc;
+    font-size: 11px;
+    font-weight: 500;
+    padding-left: 2px;
+}
+
+.all-inputs {
+    width: 100%;
+    background: #222227;
+    border: 1px solid #33333c;
+    border-radius: 6px;
+    padding: 9px 12px; /* Input size compact kar diya */
+    color: #ffffff;
+    font-size: 13px; /* Smaller text fits better */
+    outline: none;
+    
+    /* 🔥 ULTRA SMOOTH FLOW FIX: Sirf border aur shadow hilega, layout solid freeze rahegi */
+    transition: border-color 0.15s ease-out, box-shadow 0.15s ease-out;
+}
+
+/* Hover & Focus state */
+.all-inputs:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.15);
+}
+
+/* 👁️ Password Wrapper Style */
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.password-wrapper .all-inputs {
+    padding-right: 38px; /* Icon se safe distance */
+}
+
+.hide-show {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8a8a98;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.15s;
+    z-index: 10;
+}
+
+.hide-show:hover {
+    color: #ffffff;
+}
+
+/* 🚨 Error Message Area */
+.Error-filed {
+    color: #ff4d4d;
+    font-size: 11px;
+    margin-top: 1px;
+    padding-left: 2px;
+    min-height: 14px; /* Space reserved, text aane par koi jhatka nahi lagay ga */
+    display: block;
+    width: 100%;
+}
+
+/* 🚀 Primary Form Button */
+.field button {
+    width: 100%;
+    background: #4f46e5;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px; /* Clean compact padding */
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: background 0.15s ease;
+}
+
+.field button:hover {
+    background: #4338ca;
+}
+
+/* 🔗 Footer Link */
+.link {
+    text-align: center;
+    font-size: 12px;
+    color: #8a8a98;
+    margin-top: 12px;
+}
+
+.link a {
+    color: #6366f1;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
+
+/* ➖ Elegant Middle Separator Line */
+.line {
+    text-align: center;
+    position: relative;
+    margin: 15px 0;
+}
+
+.line::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #33333c;
+    z-index: 1;
+}
+
+.line span {
+    background: #18181c;
+    padding: 0 10px;
+    color: #62626e;
+    font-size: 11px;
+    position: relative;
+    z-index: 2;
+    font-weight: 600;
+}
+
+/* 🌐 Social Container Panels */
+.social-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.thirdLogin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #222227;
+    border: 1px solid #33333c;
+    border-radius: 6px;
+    padding: 9px;
+    cursor: pointer;
+    color: #e2e8f0;
+    font-size: 12px;
+    font-weight: 500;
+    transition: background 0.15s;
+}
+
+.thirdLogin:hover {
+    background: #2c2c35;
+}
+
+.thirdLogin i {
+    font-size: 16px;
+}
+
+.google i { color: #ea4335; }
+.facebook i { color: #1877f2; }
+#submit-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader {
+  width: 25px;
+  height: 25px;
+  border: 4px solid #33333c;       
+  border-top: 4px solid #00bcd4;   
+  border-radius: 50%;               
+  animation: spin 1s linear infinite; 
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

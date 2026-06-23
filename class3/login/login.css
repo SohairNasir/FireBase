@@ -103,7 +103,7 @@ body {
     color: #ff4d4d;
     font-size: 12px;
     margin-top: 4px;
-    opacity: 0; /* Shuru mein hidden rahega, JS se 1 hoga */
+    /* opacity: 0; Shuru mein hidden rahega, JS se 1 hoga */
     transition: opacity 0.2s ease;
 }
 
@@ -132,8 +132,10 @@ body {
     margin-top: 20px;
 }
 
-/* 🚀 Main Button */
 .btn button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     background: #4f46e5;
     color: #ffffff;
@@ -211,3 +213,20 @@ body {
 
 .google i { color: #ea4335; }
 .facebook i { color: #1877f2; }
+.loader {
+  width: 25px;
+  height: 25px;
+  border: 4px solid #33333c;       
+  border-top: 4px solid #00bcd4;   
+  border-radius: 50%;               
+  animation: spin 1s linear infinite; 
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

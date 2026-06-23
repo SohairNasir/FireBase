@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <body>
+      <div class="container">
+        <div class="sidebar">
+          <h2>User Info</h2>
+
+          <p id="user-name">Full Name:</p>
+          <p id="email">Email:</p>
+          <p id="loginTime">Login Time:</p>
+        </div>
+
+        <div class="main">
+          <div class="navbar">
+            <h2>Dashboard</h2>
+            <div>
+              <button class="logout-btn" id="logout-btn">Logout</button>
+              <button class="logout-btn" id="delAcc-btn">delete account</button>
+            </div>
+          </div>
+          <h3>Products</h3>
+
+          <div id="card-container" class="card-container">
+            <div class="card">
+              <img src="://via.placeholder.com/150" />
+              <h4>Shoes</h4>
+              <p>Rs. 2000</p>
+              <button>Add to Cart</button>
+            </div>
+            <div class="card">
+              <img src="://via.placeholder.com/150" />
+              <h4>Watch</h4>
+              <p>Rs. 1500</p>
+              <button>Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+
+    <script src="dashboard.js" type="module"></script>
+  </body>
+</html>

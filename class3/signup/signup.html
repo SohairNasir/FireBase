@@ -3,64 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign Up</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="signup.css">
 </head>
 <body>
 
-    
-    <div class="form signup">
-        <h3 class="heading">SignUp-Form</h3>
+    <div class="form">
+        <h3 class="heading">Create Account</h3>
+        <p class="sub-heading">Get started with your free account</p>
+        
         <form action="#" onsubmit="checkInputs(event)" class="content">
-            <div class="line underline"></div>
+            
             <div class="all-innputs-parent">
-            <div class="field input">
-                <input class="all-inputs" id="email" type="email" placeholder="Enter your Email"/>
-                <p class="Error-filed"></p>
-            </div>
+                
+                <div class="field">
+                    <label for="email">Email Address</label>
+                    <input class="all-inputs" id="email" type="email" placeholder="Enter your email"/>
+                    <p class="Error-filed"></p>
+                </div>
 
-            <div class="field input">
-            <input id="password" type="password" placeholder="Enter your new Password" class="password all-inputs"/>
-            <p class="Error-filed"></p>
-            <i class='bx bx-hide hide-show'></i>
-            </div>
-            <div class="field input">
-                <input id="confirm-pass" type="password" placeholder="Confirm Password" class="password all-inputs" />
-                <p class="Error-filed"></p>
+                <div class="field">
+                    <label for="password">Password</label>
+                    <div class="password-wrapper">
+                        <input id="password" type="password" placeholder="Create strong password" class="all-inputs"/>
+                        <i class='bx bx-hide hide-show togglePassword'></i>
+                    </div>
+                    <p class="Error-filed"></p>
+                </div>
 
-            <i class='bx bx-hide hide-show'></i>
-            </div>
+                <div class="field">
+                    <label for="confirm-pass">Confirm Password</label>
+                    <div class="password-wrapper">
+                        <input id="confirm-pass" type="password" placeholder="Repeat your password" class="all-inputs" />
+                        <i class='bx bx-hide hide-show togglePassword'></i>
+                    </div>
+                    <p class="Error-filed"></p>
+                </div>
  
-        </div>
-            <div class="field btn">
-                <button id="submit-btn">Sign Up</button>
             </div>
 
-            <div class="link sign-login">
-                <span>Already have an Account!</span>
-                <a href="#" class="forget">Login</a>
+            <div class="field" style="margin-top: 10px;">
+                <button id="submit-btn" type="submit">Sign Up</button>
             </div>
 
-
-            <div class="line"></div>
-            <!-- Other Login Options -->
-
-            <div class="thirdLogin field facebook">
-                <i class='bx bxl-facebook-circle face-icon'></i>
-                <span>SignUp with facebook</span>
-            </div>
-            
-            <div class="thirdLogin field google">
-                <i class='bx bxl-google face-icon'></i>
-                <span>SignUp with google</span>
+            <div class="link">
+                <span>Already have an account? </span>
+                <a href="../login/login.html">Login</a>
             </div>
 
-            
+            <div class="line">
+                <span>OR</span>
+            </div>
 
+            <div class="social-container">
+                <div class="thirdLogin google">
+                    <i class='bx bxl-google'></i>
+                    <span>Sign up with Google</span>
+                </div>
+                
+                <div class="thirdLogin facebook">
+                    <i class='bx bxl-facebook-circle'></i>
+                    <span>Sign up with Facebook</span>
+                </div>
+            </div>
 
         </form>
     </div>
 
-<script src="signup.js" type="module" ></script>    
+    <script src="signup.js" type="module"></script>     
 </body>
 </html>
